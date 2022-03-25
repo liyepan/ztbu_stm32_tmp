@@ -18,7 +18,7 @@
 #### 		1、使用git工具clone我的仓库
 
 ```
-git clone https://github.com/liyepan/ztbu_pcb_design.git
+git clone https://github.com/liyepan/ztbu_stm32_tmp.git
 ```
 
 #### 		2、下载项目的zip到本地目录
@@ -38,7 +38,7 @@ git clone https://github.com/liyepan/ztbu_pcb_design.git
 #### 	1、use git tool clone my warehouse
 
 ```
-git clone https://github.com/liyepan/ztbu_pcb_design.git
+git clone https://github.com/liyepan/ztbu_stm32_tmp.git
 ```
 
 #### 	2、Download the project zip to your local directory
