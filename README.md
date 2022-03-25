@@ -11,7 +11,7 @@
 
 ## 1、仓库意义
 
-​		ZTBU课程PCB设计课后作业学习过程文档，记录学习过程。
+​		ZTBU课程入式设计课后作业学习过程文档，记录学习过程。
 
 ## 2、如何参考我的作业
 
@@ -25,13 +25,13 @@ git clone https://github.com/liyepan/ztbu_pcb_design.git
 
 ​		点击项目右上角Code按钮选择Download ZIP确定
 
-#### 		3、使用Altium Designer 16 + 软件打开我的课程参考
+#### 		3、使用Keil MDK软件打开我的课程参考
 
 # 二、Following is the English version
 
 ## 1、Warehouse meaning
 
-​		ZTBU course PCB design homework learning process document, record the learning process.
+​		ZTBU course STM32 homework learning process document, record the learning process.
 
 ## 2、How to refer to my homework	
 
@@ -45,4 +45,4 @@ git clone https://github.com/liyepan/ztbu_pcb_design.git
 
 ​		Click the Code button in the upper right corner of the project to select Download ZIP3.
 
-#### 	3、Use Altium Designer 16 + software to open my course reference
+#### 	3、Use Keil MDK software to open my course reference
