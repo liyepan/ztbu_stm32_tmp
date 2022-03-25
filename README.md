@@ -4,7 +4,7 @@
 
 | University |    ZTBU    |
 | :--------: | :--------: |
-| Curriculum | PCB Design |
+| Curriculum | STM32 |
 |    Date    | 2021-2022  |
 
 # 一、以下为中文版
