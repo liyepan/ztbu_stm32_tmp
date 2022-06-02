@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\hello_stm32.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\hello_stm32.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Sun Apr 17 21:37:01 2022
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Tue May 10 21:09:45 2022
 <BR><P>
 <H3>Maximum Stack Usage =         32 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -376,7 +376,7 @@ Global Symbols
 
 <P><STRONG><a name="[5f]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 
-<P><STRONG><a name="[4f]"></a>close_light_pin</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, main.o(i.close_light_pin))
+<P><STRONG><a name="[4f]"></a>close_light_pin</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, main.o(i.close_light_pin))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = close_light_pin
 </UL>
 <BR>[Calls]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
@@ -384,7 +384,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[46]"></a>main</STRONG> (Thumb, 118 bytes, Stack size 8 bytes, main.o(i.main))
+<P><STRONG><a name="[46]"></a>main</STRONG> (Thumb, 136 bytes, Stack size 8 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = main &rArr; GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits

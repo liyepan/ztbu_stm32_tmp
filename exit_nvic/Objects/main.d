@@ -28,3 +28,4 @@
 .\objects\main.o: .\lib\inc\stm32f10x_usart.h
 .\objects\main.o: .\lib\inc\stm32f10x_wwdg.h
 .\objects\main.o: .\lib\inc\misc.h
+.\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h

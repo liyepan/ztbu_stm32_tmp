@@ -23,7 +23,6 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x_it.h"
-
 /** @addtogroup STM32F10x_StdPeriph_Template
   * @{
   */
@@ -150,7 +149,25 @@ void SysTick_Handler(void)
   */
 /*void PPP_IRQHandler(void)
 {
+		if(GPIO_ReadInputDataBit(GPIOE,GPIO_Pin_3)==0){
+		GPIO_SetBits(GPIOB,GPIO_Pin_5);
+		GPIO_ResetBits(GPIOB,GPIO_Pin_5);
+	}
+	//if(EXTI_GetITStatus(EXTI_Line3) != RESET){
+		//GPIO_SetBits(GPIOB,GPIO_Pin_5);
+		//GPIO_ResetBits(GPIOB,GPIO_Pin_5);
+		EXTI_ClearITPendingBit(EXTI_Line3);
+	//}
 }*/
+
+void EXTI3_IRQHandler(void)
+{
+	//开发板使用按键是GPIOE_3所以用EXTI3，
+	if(GPIO_ReadInputDataBit(GPIOE,GPIO_Pin_3)==0){
+	  GPIO_ResetBits(GPIOB,GPIO_Pin_5); 
+		EXTI_ClearITPendingBit(EXTI_Line3);
+	}
+}
 
 /**
   * @}

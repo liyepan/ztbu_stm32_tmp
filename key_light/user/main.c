@@ -4,27 +4,34 @@ void close_light_pin(void);
 unsigned int  ReadValue;
 
 int main(void){
-	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB | RCC_APB2Periph_GPIOC,ENABLE);
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB | RCC_APB2Periph_GPIOE,ENABLE);
 	GPIO_InitTypeDef GPIO_InitStructure;
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0 | GPIO_Pin_1;
+	//led
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_5;
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
 	GPIO_Init(GPIOB,&GPIO_InitStructure);
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_13;
+	//key
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_3 | GPIO_Pin_4;
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPD;
-	GPIO_Init(GPIOC,&GPIO_InitStructure);
+	GPIO_Init(GPIOE,&GPIO_InitStructure);
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_5;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+	GPIO_Init(GPIOE,&GPIO_InitStructure);
 	close_light_pin();
 	while(1){
-		ReadValue = GPIO_ReadInputDataBit(GPIOC,GPIO_Pin_13);
+		close_light_pin();
+		ReadValue = GPIO_ReadInputDataBit(GPIOE,GPIO_Pin_3);
+		if(ReadValue == 0){
+			GPIO_ResetBits(GPIOE,GPIO_Pin_5);
+		}
 		if(ReadValue == 1){
-			close_light_pin();
-			GPIO_ResetBits(GPIOB,GPIO_Pin_0);//green
-		}else if(ReadValue == 0){
-			close_light_pin();
-			GPIO_ResetBits(GPIOB,GPIO_Pin_1);//blue
+			GPIO_ResetBits(GPIOB,GPIO_Pin_5);
 		}
 	}
 }
 void close_light_pin(void){
 	GPIO_SetBits(GPIOB,GPIO_Pin_All);
+	GPIO_SetBits(GPIOE,GPIO_Pin_All);
 }
